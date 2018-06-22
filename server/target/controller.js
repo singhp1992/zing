@@ -13,12 +13,12 @@ const routing_controllers_1 = require("routing-controllers");
 let MainController = class MainController {
     main() {
         return {
-            hello: 'World'
+            hello: 'we sell tasty crickets'
         };
     }
 };
 __decorate([
-    routing_controllers_1.Get("/hello"),
+    routing_controllers_1.Get("/products"),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
