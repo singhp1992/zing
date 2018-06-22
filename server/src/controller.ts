@@ -3,10 +3,10 @@ import { Controller, Get } from 'routing-controllers'
 @Controller()
 export default class MainController {
 
-    @Get("/hello")
+    @Get("/products")
     main() {
         return {
-            hello: 'World'
+            hello:'we sell tasty crickets'
         }
     }
 
