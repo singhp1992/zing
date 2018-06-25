@@ -18,7 +18,7 @@ let ProductController = class ProductController {
     async allProducts() {
         const products = await entity_1.default.find();
         if (!products)
-            throw new routing_controllers_1.NotFoundError('There are no products to display');
+            throw new routing_controllers_1.NotFoundError('Oh no....There are no products');
         return { products };
     }
     async createProduct(product) {
@@ -28,7 +28,7 @@ let ProductController = class ProductController {
     async updateProduct(id, update) {
         const product = await entity_1.default.findOne(id);
         if (!product)
-            throw new routing_controllers_1.NotFoundError(`Product not found`);
+            throw new routing_controllers_1.NotFoundError(`Product not found :/`);
         const updatedProduct = entity_1.default.merge(product, update);
         const entity = await updatedProduct.save();
         return entity;
@@ -38,7 +38,7 @@ let ProductController = class ProductController {
         if (!product)
             throw new routing_controllers_1.NotFoundError(`Product not found`);
         entity_1.default.remove(product);
-        return 'successfully deleted';
+        return 'Product was deleted!';
     }
 };
 __decorate([

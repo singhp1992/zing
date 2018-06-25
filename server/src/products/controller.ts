@@ -8,7 +8,7 @@ export default class ProductController {
     @Get('/products')
     async allProducts() {
         const products = await Product.find()
-        if (!products) throw new NotFoundError('There are no products to display')
+        if (!products) throw new NotFoundError('Oh no....There are no products')
         return { products }
     }
 
@@ -31,7 +31,7 @@ export default class ProductController {
     ) {
         const product = await Product.findOne(id)
 
-        if (!product) throw new NotFoundError(`Product not found`)
+        if (!product) throw new NotFoundError(`Product not found :/`)
 
         const updatedProduct = Product.merge(product, update)
 
@@ -49,7 +49,7 @@ export default class ProductController {
         if (!product) throw new NotFoundError(`Product not found`)
 
         Product.remove(product)
-        return 'successfully deleted'
+        return 'Product was deleted!'
     }
 
 
