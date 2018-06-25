@@ -12,7 +12,7 @@ export default class ProductController {
     //     }
     // }
 
-    // @Authorized()
+    //@Authorized()
     @Get('/products')
     async allProducts() {
         const products = await Product.find()
