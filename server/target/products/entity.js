@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const BaseEntity_1 = require("typeorm/repository/BaseEntity");
+const class_validator_1 = require("class-validator");
 let Product = class Product extends BaseEntity_1.BaseEntity {
 };
 __decorate([
@@ -22,9 +23,14 @@ __decorate([
     __metadata("design:type", String)
 ], Product.prototype, "name", void 0);
 __decorate([
+    class_validator_1.IsNumberString(),
     typeorm_1.Column('text', { nullable: true }),
     __metadata("design:type", String)
-], Product.prototype, "remarks", void 0);
+], Product.prototype, "price", void 0);
+__decorate([
+    typeorm_1.Column('text', { nullable: false }),
+    __metadata("design:type", String)
+], Product.prototype, "description", void 0);
 Product = __decorate([
     typeorm_1.Entity()
 ], Product);
