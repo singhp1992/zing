@@ -8,6 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const routing_controllers_1 = require("routing-controllers");
 const entity_1 = require("./entity");
@@ -18,6 +21,10 @@ let ProductController = class ProductController {
             throw new routing_controllers_1.NotFoundError('There are no products to display');
         return { products };
     }
+    async createProduct(product) {
+        const entity = await product.save();
+        return entity;
+    }
 };
 __decorate([
     routing_controllers_1.Get('/products'),
@@ -25,6 +32,14 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "allProducts", null);
+__decorate([
+    routing_controllers_1.Post('/products'),
+    routing_controllers_1.HttpCode(201),
+    __param(0, routing_controllers_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [entity_1.default]),
+    __metadata("design:returntype", Promise)
+], ProductController.prototype, "createProduct", null);
 ProductController = __decorate([
     routing_controllers_1.Controller()
 ], ProductController);
