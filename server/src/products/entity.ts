@@ -1,5 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column  } from 'typeorm'
 import { BaseEntity } from 'typeorm/repository/BaseEntity'
+import { IsNumberString } from 'class-validator'
 
 @Entity()
 export default class Product extends BaseEntity {
@@ -10,6 +11,10 @@ export default class Product extends BaseEntity {
     @Column('text', { nullable: false })
     name: string
 
-    @Column('text', { nullable: true })
-    remarks: string
+    @IsNumberString()
+    @Column('text', {nullable: true })
+    price: string  
+
+    @Column('text', { nullable: false })
+    description: string
 }

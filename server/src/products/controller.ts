@@ -1,4 +1,4 @@
-import { Controller, Get, NotFoundError, Post, HttpCode, Body, Patch, Param } from 'routing-controllers'
+import { Controller, Get, NotFoundError, Post, HttpCode, Body, Patch, Param, Delete } from 'routing-controllers'
 import Product from './entity'
 
 @Controller()
@@ -8,7 +8,7 @@ export default class ProductController {
     @Get('/products')
     async allProducts() {
         const products = await Product.find()
-        if (!products) throw new NotFoundError('There are no products to display')
+        if (!products) throw new NotFoundError('Oh no....There are no products')
         return { products }
     }
 
@@ -31,12 +31,25 @@ export default class ProductController {
     ) {
         const product = await Product.findOne(id)
 
-        if (!product) throw new NotFoundError(`Product not found`)
+        if (!product) throw new NotFoundError(`Product not found :/`)
 
         const updatedProduct = Product.merge(product, update)
 
         const entity = await updatedProduct.save()
         return entity
+    }
+
+    //delete product by id
+    @Delete('/products/:id')
+    async deleteProduct(
+        @Param('id') id: number
+    ) {
+        const product = await Product.findOne(id)
+
+        if (!product) throw new NotFoundError(`Product not found`)
+
+        Product.remove(product)
+        return 'Product was deleted!'
     }
 
 
