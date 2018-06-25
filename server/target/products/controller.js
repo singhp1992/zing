@@ -25,6 +25,14 @@ let ProductController = class ProductController {
         const entity = await product.save();
         return entity;
     }
+    async updateProduct(id, update) {
+        const product = await entity_1.default.findOne(id);
+        if (!product)
+            throw new routing_controllers_1.NotFoundError(`Product not found`);
+        const updatedProduct = entity_1.default.merge(product, update);
+        const entity = await updatedProduct.save();
+        return entity;
+    }
 };
 __decorate([
     routing_controllers_1.Get('/products'),
@@ -40,6 +48,14 @@ __decorate([
     __metadata("design:paramtypes", [entity_1.default]),
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "createProduct", null);
+__decorate([
+    routing_controllers_1.Patch('/products/:id([0-9]+)'),
+    __param(0, routing_controllers_1.Param('id')),
+    __param(1, routing_controllers_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Object]),
+    __metadata("design:returntype", Promise)
+], ProductController.prototype, "updateProduct", null);
 ProductController = __decorate([
     routing_controllers_1.Controller()
 ], ProductController);
