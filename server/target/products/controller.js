@@ -33,6 +33,13 @@ let ProductController = class ProductController {
         const entity = await updatedProduct.save();
         return entity;
     }
+    async deleteProduct(id) {
+        const product = await entity_1.default.findOne(id);
+        if (!product)
+            throw new routing_controllers_1.NotFoundError(`Product not found`);
+        entity_1.default.remove(product);
+        return 'successfully deleted';
+    }
 };
 __decorate([
     routing_controllers_1.Get('/products'),
@@ -56,6 +63,13 @@ __decorate([
     __metadata("design:paramtypes", [Number, Object]),
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "updateProduct", null);
+__decorate([
+    routing_controllers_1.Delete('/products/:id'),
+    __param(0, routing_controllers_1.Param('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], ProductController.prototype, "deleteProduct", null);
 ProductController = __decorate([
     routing_controllers_1.Controller()
 ], ProductController);
