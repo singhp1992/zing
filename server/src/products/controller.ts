@@ -1,7 +1,7 @@
 import { Controller, Get } from 'routing-controllers'
 
 @Controller()
-export default class MainController {
+export default class ProductController {
 
     @Get("/products")
     main() {
