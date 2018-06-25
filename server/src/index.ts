@@ -2,13 +2,15 @@ import 'reflect-metadata'
 import { createKoaServer } from "routing-controllers"
 import setupDb from './db'
 import ProductController from "./products/controller"
+import UserController from './users/controller'
 
 const port = process.env.PORT || 4000
 
 const app = createKoaServer({
     cors: true,
     controllers: [
-        ProductController
+        ProductController,
+        UserController
     ]
 })
 

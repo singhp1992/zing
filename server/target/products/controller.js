@@ -10,19 +10,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const routing_controllers_1 = require("routing-controllers");
+const entity_1 = require("./entity");
 let ProductController = class ProductController {
-    main() {
-        return {
-            hello: 'we sell tasty crickets'
-        };
+    async allProducts() {
+        const products = await entity_1.default.find();
+        if (!products)
+            throw new routing_controllers_1.NotFoundError('There are no products to display');
+        return { products };
     }
 };
 __decorate([
-    routing_controllers_1.Get("/products"),
+    routing_controllers_1.Get('/products'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
-], ProductController.prototype, "main", null);
+    __metadata("design:returntype", Promise)
+], ProductController.prototype, "allProducts", null);
 ProductController = __decorate([
     routing_controllers_1.Controller()
 ], ProductController);
