@@ -13,17 +13,20 @@ class HomePage extends PureComponent {
 
     render(product, index) {
         const { products } = this.props
+
+        console.log(products)
+
         return (
             <h1 className='outer-paper'>
-                <h1>Home Page</h1>
-                {products.map((product, index) =>
+                <p>Home Page</p>
+                {products.map((products, index) =>
                     <h2 className="product-card">
-                        <h1>
+                        <p>
                             <p variant="headline" component="h2">
                                 Product #{product.productNumber}
                             </p>
-                        </h1>
-                        <h1>
+                        </p>
+                        <p>
                             <Link to={`/products/${product.productNumber}`} style={{ textDecoration: 'none' }}>
                                 {/* <Button
                                     size="small"
@@ -32,7 +35,7 @@ class HomePage extends PureComponent {
                                 > Select
                                 </Button> */}
                             </Link>
-                        </h1>
+                        </p>
                     </h2>
                 )}
             </h1>

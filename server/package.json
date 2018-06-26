@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "nodemon .",
-    "watch": "tsc -w",
+    "watch": "node_modules/bin/tsc -w",
     "dev": "nodemon --inspect ."
   }
 }
