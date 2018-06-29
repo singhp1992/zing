@@ -7,8 +7,8 @@
   background-color: black;
   height: 1000px;
   padding: 10px;
-  color: #d6a1ee;
-  
+  color: #e8b6ff;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .App-title {
@@ -29,28 +29,28 @@ body {
   font-size: 28px;
 }
 
-.header {
+/* .header {
   background-color: #f1f1f1;
   padding: 30px;
   text-align: center;
-}
+} */
 
 #navbar {
   overflow: hidden;
   color: #E6E6FA;
-  font-family: sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #navbar a {
   float: left;
   width: 25%; 
   display: block;
-  color: #d6a1ee;
+  color: #e8b6ff;
   text-align: center;
   /* padding: 20px; */
   text-decoration: none;
   font-size: 17px;
-  font-family: sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #navbar a:hover {
@@ -60,7 +60,7 @@ body {
 
 #navbar a.active {
   /* background-color: #E6E6FA;; */
-  color: #d6a1ee;
+  color:  #e8b6ff;
 }
 
 .content {
