@@ -13,7 +13,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">ZING</h1>
               <div id="navbar">
-                <a class="active">Home</a>
+                <a>Home</a>
                 <a>Products</a>
                 <a>About Us</a>
                 <a>Login</a>
