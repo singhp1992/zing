@@ -18,6 +18,7 @@ class App extends Component {
                 <a>About Us</a>
                 <a>Login</a>
               </div>
+              <p> website in progress :)</p>
         </header>
         </nav>
         <p className="App-intro">
