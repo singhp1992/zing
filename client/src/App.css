@@ -7,7 +7,7 @@
   background-color: black;
   height: 1000px;
   padding: 10px;
-  color: #E6E6FA;
+  color: #d6a1ee;
   
 }
 
@@ -42,11 +42,12 @@ body {
 }
 
 #navbar a {
-  float: right;
+  float: left;
+  width: 25%; 
   display: block;
   color: #d6a1ee;
   text-align: center;
-  padding: 14px 16px;
+  /* padding: 20px; */
   text-decoration: none;
   font-size: 17px;
   font-family: sans-serif;
@@ -58,8 +59,8 @@ body {
 }
 
 #navbar a.active {
-  background-color: #E6E6FA;;
-  color: white;
+  /* background-color: #E6E6FA;; */
+  color: #d6a1ee;
 }
 
 .content {
