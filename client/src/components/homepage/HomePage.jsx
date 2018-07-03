@@ -28,12 +28,7 @@ class HomePage extends PureComponent {
                         </p>
                         <p>
                             <Link to={`/products/${product.productNumber}`} style={{ textDecoration: 'none' }}>
-                                {/* <Button
-                                    size="small"
-                                    color="secondary"
-                                    variant="raised"
-                                > Select
-                                </Button> */}
+                                <button class="button">Select</button>
                             </Link>
                         </p>
                     </h2>
