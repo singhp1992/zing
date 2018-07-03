@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import HomePage from './components/homepage/HomePage'
+import TopBar from './components/topbar/TopBar'
 
 class App extends Component {
   render() {
@@ -10,16 +11,7 @@ class App extends Component {
       <Router> 
       <div className="App">
         <nav> 
-        <header className="App-header">
-          <h1 className="App-title">ZING</h1>
-              <div id="navbar">
-                <a>Home</a>
-                <a>Products</a>
-                <a>About Us</a>
-                <a>Login</a>
-              </div>
-              <p> website in progress :)</p>
-        </header>
+          <TopBar/>
         </nav>
         <p className="App-intro">
         </p>
