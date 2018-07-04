@@ -9,14 +9,10 @@ export default class TopBar extends PureComponent {
         <header className = "App-header" >
         <h1 className="App-title">ZING</h1>
         <div id="navbar">
-            <table> 
-                <thead>
-                    <tc>Home</tc>
-                    <tc>Products</tc>
-                    <tc>About Us</tc>
-                    <tc>Login</tc>
-                </thead> 
-            </table> 
+            <a>Home</a>
+            <a>Products</a>
+            <a>About Us</a>
+            <a>Login</a>
         </div>
         <p> website in progress :)</p>
         </header>
