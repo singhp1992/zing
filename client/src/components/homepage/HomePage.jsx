@@ -12,14 +12,18 @@ class HomePage extends PureComponent {
 
 
     render(product, index) {
-        const { products } = this.props
+        const {products} = this.props
 
-        console.log(products)
+        console.log(products.keys)
+
+        // for (var i=0; i < products.length; i++) {
+        //     console.log(products[i]);
+        // }
 
         return (
             <h1 className='outer-paper'>
                 <p>Home Page</p>
-                {products.map((products, index) =>
+                {products.map((product, index) =>
                     <h2 className="product-card">
                         <p>
                             <p variant="headline" component="h2">
