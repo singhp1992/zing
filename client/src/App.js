@@ -13,9 +13,7 @@ class App extends Component {
         <nav> 
           <TopBar/>
         </nav>
-        <p className="App-intro">
-        </p>
-          <main style={{ marginTop: 75 }}>
+          <main style={{ margin: '80px 0 10px 20px' }}>
             <Route exact path="/products" component={HomePage} />
           </main> 
       </div>
