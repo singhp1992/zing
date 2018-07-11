@@ -10,6 +10,7 @@ const fetchProducts = products => ({
     payload: products
 })
 
+
 export const getProducts = () => (dispatch, getState) => {
     //const state = getState()
     request
