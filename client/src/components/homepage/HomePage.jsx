@@ -7,23 +7,22 @@ import { Link } from 'react-router-dom'
 class HomePage extends PureComponent {
 
     componentWillMount() {
-        this.props.getProducts()
+        this.props.getProducts(this.props.match.params.id)
     }
 
 
     render(product, index) {
-        const {products} = this.props
+        const products = this.props
 
-        console.log(products.keys)
+        console.log(products.map)
 
-        // for (var i=0; i < products.length; i++) {
-        //     console.log(products[i]);
+        // for ( i = 0; i < products.length; i++) {
+        //     console.log(products[i])
         // }
 
         return (
             <h1 className='outer-paper'>
-                <p>Home Page</p>
-                {products.map((product, index) =>
+                {/* {products.map((product, index) =>
                     <h2 className="product-card">
                         <p>
                             <p variant="headline" component="h2">
@@ -36,7 +35,7 @@ class HomePage extends PureComponent {
                             </Link>
                         </p>
                     </h2>
-                )}
+                )} */}
             </h1>
         )
 
