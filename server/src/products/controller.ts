@@ -1,10 +1,10 @@
-import { Controller, Get, NotFoundError, Post, HttpCode, Body, Patch, Param, Delete } from 'routing-controllers'
+import { Controller, Get, NotFoundError, Post, HttpCode, Body, Patch, Param, Delete, Authorized } from 'routing-controllers'
 import Product from './entity'
 
 @Controller()
 export default class ProductController {
 
-    //@Authorized()
+    @Authorized()
     @Get('/products')
     async allProducts() {
         const products = await Product.find()
