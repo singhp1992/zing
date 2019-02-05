@@ -12,7 +12,7 @@ const fetchProducts = products => ({
 
 
 export const getProducts = () => (dispatch, getState) => {
-    //const state = getState()
+    const state = getState()
     request
         .get(`${baseUrl}/products`)
         .then(result => dispatch(fetchProducts(result.body)))
