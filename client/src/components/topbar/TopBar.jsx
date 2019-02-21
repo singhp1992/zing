@@ -8,7 +8,7 @@ export default class TopBar extends PureComponent {
     render() { return (
         <header className = "App-header" >
         <h1 className="App-title">ZING</h1>
-            <div class="buttons" id="navbar">
+            <div class="buttons">
                 <a>Home</a>
                 <a>Products</a>
                 <a>About Us</a>
