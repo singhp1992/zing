@@ -27,30 +27,20 @@ body {
   font-family: 'Advent Pro';
 }
 
-#navbar {
-  overflow: hidden;
-  color: #E6E6FA;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-#navbar a {
-  float: left;
+.buttons {
   width: 25%; 
   display: block;
   color:  #4faaff;
   text-align: center;
-  text-decoration: none;
   font-size: 17px;
-  font-family: 'Advent Pro'
+  font-family: 'Advent Pro';
+  border-radius: 30px;
+  overflow: hidden;
 }
 
-#navbar a:hover {
+.buttons:hover {
   background-color: #4faaff;
   color: white;
-}
-
-.buttons {
-  border-radius: 30px;
 }
 
 .content {
