@@ -5,7 +5,7 @@
 .App-header {
   padding: 10px;
   color: #4faaff;
-  font-family: 'Advent Pro';font-size: 22px;
+  font-family: 'Advent Pro';
 }
 
 .App-title {
@@ -24,27 +24,20 @@
 body {
   margin: 0;
   font-size: 28px;
-   font-family: 'Advent Pro';font-size: 22px;
+  font-family: 'Advent Pro';
 }
 
-#navbar {
-  overflow: hidden;
-  color: #E6E6FA;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-#navbar a {
-  float: left;
+.buttons {
   width: 25%; 
   display: block;
   color:  #4faaff;
   text-align: center;
-  text-decoration: none;
   font-size: 17px;
-  font-family: 'Times New Roman', Times, serif;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
-#navbar a:hover {
+.buttons:hover {
   background-color: #4faaff;
   color: white;
 }
@@ -67,7 +60,7 @@ body {
     background-color: #4faaff;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
