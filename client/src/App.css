@@ -1,14 +1,11 @@
 .App {
   text-align: center;
-  /* background-color: black; */
 }
 
 .App-header {
-  /* background-color: black; */
-  /* height: 100px; */
   padding: 10px;
   color: #4faaff;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Advent Pro';font-size: 22px;
 }
 
 .App-title {
@@ -27,13 +24,8 @@
 body {
   margin: 0;
   font-size: 28px;
+   font-family: 'Advent Pro';font-size: 22px;
 }
-
-/* .header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-} */
 
 #navbar {
   overflow: hidden;
@@ -47,7 +39,6 @@ body {
   display: block;
   color:  #4faaff;
   text-align: center;
-  /* padding: 20px; */
   text-decoration: none;
   font-size: 17px;
   font-family: 'Times New Roman', Times, serif;
