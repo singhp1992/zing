@@ -28,19 +28,18 @@ body {
 }
 
 .buttons {
-  width: 25%; 
   display: block;
   color:  #4faaff;
-  text-align: center;
   font-size: 17px;
   border-radius: 30px;
   overflow: hidden;
-}
+  text-align: right;
+};
 
-.buttons:hover {
+/* .buttons:hover {
   background-color: #4faaff;
   color: white;
-}
+} */
 
 .content {
   padding: 16px;
